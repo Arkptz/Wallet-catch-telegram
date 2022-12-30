@@ -18,7 +18,6 @@ async def normal_handler(event):
     try:
         user_mess = event.message.to_dict()['reply_markup']['rows'][0]['buttons'][0]['url'][20:].split('=')
         await client.send_message('wallet', '/start '+user_mess[1])
-        print('\n\n\n\n САССАААААТТТ \n\n\n\n')
         print(event.message.to_dict())
     except:
         print(event.message.to_dict())
